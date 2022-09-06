@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewData["Title"] = "PersonalDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Personal Details</h1>
+@using(Html.BeginForm()){
+
+    <table class="table">
+        <tr>
+            <td>
+                @Html.Label("Enter full name")
+            </td>
+            <td>
+                @Html.TextBox("fname")
+                @*<input type="text" id="fname" name="fname"/>*@
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("Enter Contact")
+            </td>
+            <td>
+                @Html.TextBox("contact")
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("Select Gender")
+            </td>
+            <td>
+                @Html.RadioButton("gender","Male") Male
+                @Html.RadioButton("gender","Female") Female
+
+               @* <input type="radio" name="gender" value="Male"/> Male
+                <input type="radio" name="gender" value="Female"/> Female*@
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("Select Hobbies")
+            </td>
+            <td>
+              @*  @Html.CheckBox("hobies","Sports") Sports*@
+               <input type="checkbox" name="hobbies" value="Sports"/> Sports
+               <input type="checkbox" name="hobbies" value="Music"/> Music
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Select Option</label>
+            </td>
+            <td>
+                @Html.DropDownList("options")
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Save"/>
+            </td>
+        </tr>
+    </table>
+
+}
+

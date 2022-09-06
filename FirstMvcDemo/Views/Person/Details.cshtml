@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Person Details</h1>
+<p>
+    Name : @ViewBag.Name
+</p>
+<p>
+    Contact Number :@ViewBag.Contact
+</p>
+<p>
+    Gender : @ViewBag.Gender
+</p>
+<div>
+    <ul>
+    @foreach (var item in ViewBag.Hobbies)
+    {
+       <li>
+        @item
+        </li>
+    }
+    </ul>
+</div>
+<p>
+    Your Option : @ViewBag.Option
+</p>

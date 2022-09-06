@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<h3>
+    @ViewBag.Message
+</h3>
+
+<!--we are able to write C# code in the cshmtl page in the MVC using  sign
+    at sign will be use to write C# code
+-->
+@if (ViewData["list"] != null)
+{
+    <ol class="list-group">
+    @foreach (string color in (IEnumerable<string>)ViewData["list"])
+    {
+        <li class="list-group-item">
+            @color
+        </li>
+    }
+</ol>
+}
+
+
+<ul>
+    @foreach (var item in ViewBag.ColorList)
+    {
+        <li>
+            @item
+        </li>
+    }
+</ul>
